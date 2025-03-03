@@ -34,7 +34,7 @@ body {
 }
 
 header {
-    background: #5a4d43; /* tmavší hnědá pro lepší kontrast */
+    background: #9d8189;
     color: white;
     padding: 20px;
     text-align: center;
@@ -76,7 +76,7 @@ nav a:hover {
 
 .button {
     display: inline-block;
-    background-color: #8b6c4b; /* světlejší hnědá pro lepší kontrast */
+    background-color: #9d8189;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -87,7 +87,7 @@ nav a:hover {
 }
 
 .button:hover {
-    background-color: #b6a58e; /* světlejší odstín pro lepší kontrast */
+    background-color: #9d8189;
 }
 
 .destinations {
@@ -139,7 +139,7 @@ nav a:hover {
 
 .card-button {
     display: inline-block;
-    background-color: #8b6c4b; /* světlejší hnědá pro lepší kontrast */
+    background-color: #7d4f50;
     color: white;
     padding: 10px 15px;
     text-decoration: none;
@@ -149,11 +149,11 @@ nav a:hover {
 }
 
 .card-button:hover {
-    background-color: #b6a58e;
+    background-color: #d1be9c;
 }
 
 footer {
-    background: #5a4d43; /* tmavší hnědá pro lepší kontrast */
+    background: #9d8189;
     margin-top: auto;
     text-align: center;
     padding: 15px;
@@ -171,4 +171,29 @@ footer a:hover {
 @media (max-width: 1200px) {
     .card {
         width: calc(33.33% - 15px);
- 
+    }
+}
+
+@media (max-width: 900px) {
+    .card {
+        width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+
+    .destinations h3 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text p {
+        font-size: 1.2rem;
+    }
+}
