@@ -6,14 +6,14 @@
 }
 
 body {
-    min-height: 100vh; /* Zajištění minimální výšky stránky */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
 .parallax {
     background-image: url('images/background.jpg');
-    min-height: 100vh; /* Opraveno z height na min-height */
+    min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,12 @@ body {
     padding-top: 50px;
 }
 
-
+/* Opraveno pro responzivitu na mobilních zařízeních */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* vypnutí parallax efektu na mobilních zařízeních */
+    }
+}
 
 header {
     background: #98796d;
@@ -148,9 +153,8 @@ nav a:hover {
 }
 
 footer {
-    
     background: #98796d;
-    margin-top: auto; /* Přilepí footer na spodní část stránky */
+    margin-top: auto;
     text-align: center;
     padding: 15px;
 }
