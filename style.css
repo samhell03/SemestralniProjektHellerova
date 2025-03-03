@@ -34,8 +34,8 @@ body {
 }
 
 header {
-    background: #5b6f5d;  /* Změna na požadovanou barvu */
-    color: white;
+    background: #565849;  /* Změna na požadovanou barvu pozadí */
+    color: white;  /* Text bílý */
     padding: 20px;
     text-align: center;
     position: relative;
@@ -50,13 +50,13 @@ nav ul {
 }
 
 nav a {
-    color: white;
+    color: white;  /* Text v menu bílý */
     text-decoration: none;
     font-size: 18px;
 }
 
 nav a:hover {
-    color: #5b6f5d;  /* Hover efekt na stejnou barvu jako základní */
+    color: white;  /* Hover zůstane bílý */
     text-decoration: underline;
 }
 
@@ -154,14 +154,15 @@ nav a:hover {
 }
 
 footer {
-    background: #5b6f5d; /* Změna na požadovanou barvu */
+    background: #565849; /* Změna na požadovanou barvu pozadí */
+    color: white;  /* Text bílý */
     margin-top: auto;
     text-align: center;
     padding: 15px;
 }
 
 footer a {
-    color: #ffcc00;
+    color: white;  /* Odkazy bílá */
     text-decoration: none;
 }
 
@@ -196,5 +197,132 @@ footer a:hover {
 
     .hero-text p {
         font-size: 1.2rem;
+    }
+}
+
+/* Nové styly pro stránku Dubaj (pouze pro dubaj-page) */
+body.dubaj-page {
+    background-color: #f5f5f5; /* Světle šedé pozadí pro stránku */
+    color: #333; /* Tmavší text pro lepší čitelnost */
+}
+
+header.dubaj-page {
+    background: #565849; /* Pozadí v zelené barvě */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-destination {
+    background-color: rgba(0, 0, 0, 0.4); /* Mírně tmavé pozadí pro lepší čitelnost textu */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-destination h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* Sekce s informacemi o destinaci */
+.destination-info {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.destination-info h2 {
+    font-size: 2.5rem;
+    color: #565849;
+}
+
+.destination-info p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Nejlepší místa k návštěvě */
+.destinations.dubaj-page {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e8e8e8; /* Světle šedé pozadí pro tuto sekci */
+}
+
+.destinations h3 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: calc(25% - 20px);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Patička pro stránku Dubaj */
+footer.dubaj-page {
+    background: #565849;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .hero-destination h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
     }
 }
