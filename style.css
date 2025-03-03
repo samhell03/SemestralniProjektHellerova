@@ -12,7 +12,7 @@ body {
 }
 
 .parallax {
-    background-image: url('images/background.jpg');
+    background-image: url('images/background2.jpg');
     min-height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -34,7 +34,7 @@ body {
 }
 
 header {
-    background: #669bbc;  /* Změna na modrošedou */
+    background: #5b6f5d;  /* Změna na požadovanou barvu */
     color: white;
     padding: 20px;
     text-align: center;
@@ -56,7 +56,7 @@ nav a {
 }
 
 nav a:hover {
-    color: black;  /* Hover efekt na černou barvu */
+    color: #5b6f5d;  /* Hover efekt na stejnou barvu jako základní */
     text-decoration: underline;
 }
 
@@ -88,7 +88,7 @@ nav a:hover {
 }
 
 .button:hover {
-    background-color: #c48b94;  /* Změna hover efektu na tmavší růžovou */
+    background-color: #5b6f5d;  /* Změna hover efektu na požadovanou barvu */
 }
 
 .destinations {
@@ -150,11 +150,11 @@ nav a:hover {
 }
 
 .card-button:hover {
-    background-color: #c48b94; /* Změna hover efektu na tmavší růžovou */
+    background-color: #5b6f5d; /* Změna hover efektu na požadovanou barvu */
 }
 
 footer {
-    background: #669bbc; /* Změna na modrošedou */
+    background: #5b6f5d; /* Změna na požadovanou barvu */
     margin-top: auto;
     text-align: center;
     padding: 15px;
