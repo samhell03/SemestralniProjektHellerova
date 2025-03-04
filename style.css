@@ -122,11 +122,13 @@ nav a:hover {
 
 .card img,
 .card video {
+    pointer-events: none; /* Zabrání kliknutí */
     width: 100%;
-    height: 180px; /* Nastaví stejnou výšku jako obrázky */
+    height: 180px;
     object-fit: cover;
     display: block;
 }
+
 
 .card h4 {
     font-size: 18px;
