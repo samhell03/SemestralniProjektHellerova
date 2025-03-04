@@ -126,7 +126,6 @@ nav a:hover {
     height: 180px; /* Nastaví stejnou výšku jako obrázky */
     object-fit: cover;
     display: block;
-    pointer-events: none; /* Zabrání nechtěnému kliknutí a otevření na fullscreen */
 }
 
 .card h4 {
