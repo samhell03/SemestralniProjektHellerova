@@ -123,9 +123,10 @@ nav a:hover {
 .card img,
 .card video {
     width: 100%;
-    height: 180px; /* Stejná výška pro všechny obrázky i videa */
-    object-fit: cover; /* Ořízne, ale zachová poměr stran */
+    height: 180px; /* Nastaví stejnou výšku jako obrázky */
+    object-fit: cover;
     display: block;
+    pointer-events: none; /* Zabrání nechtěnému kliknutí a otevření na fullscreen */
 }
 
 .card h4 {
