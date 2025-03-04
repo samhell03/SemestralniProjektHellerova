@@ -77,7 +77,7 @@ nav a:hover {
 
 .button {
     display: inline-block;
-    background-color: #669bbc; /* Změna na modrošedou */
+    background-color: #2b5373; /* Změna na modrošedou */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -140,7 +140,7 @@ nav a:hover {
 
 .card-button {
     display: inline-block;
-    background-color: #669bbc; /* Změna na modrošedou */
+    background-color: #2b5373; /* Změna na modrošedou */
     color: white;
     padding: 10px 15px;
     text-decoration: none;
