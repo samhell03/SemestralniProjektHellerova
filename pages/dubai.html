@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Dubaj - Destinace</title>
 </head>
-<body>
+<body class="dubaj-page">
 
-<header>
+<header class="dubaj-page">
     <nav>
         <ul>
             <li><a href="../index.html">Domů</a></li>
@@ -22,38 +22,53 @@
 
 <main>
     <section class="hero-destination" style="background-image: url('../images/dubai-banner.jpg');">
-        <h1>Dubaj</h1>
+        <div class="overlay">
+            <h1>Objevte krásu Dubaje</h1>
+            <p>Nejluxusnější město světa, plné zázraků architektury a fascinující historie.</p>
+        </div>
     </section>
     
-    <section class="destination-info">
+    <section id="destinace" class="destination-info">
         <h2>O Dubaji</h2>
         <p>Dubaj je jedním z nejluxusnějších a nejmodernějších měst na světě. Známá je svými mrakodrapy, umělými ostrovy a bohatou kulturou.</p>
     </section>
 
-    <section class="destinations.dubaj-page">
+    <section class="destinations dubaj-page">
         <h3>Nejlepší místa k návštěvě</h3>
         <div class="card-container">
             <div class="card">
                 <img src="../images/Burj Khalifa.jpg" alt="Burj Khalifa">
-                <h4>Burj Khalifa</h4>
+                <div class="overlay-card">
+                    <h4>Burj Khalifa</h4>
+                    <p>Nejvyšší budova světa s dechberoucím výhledem.</p>
+                </div>
             </div>
             <div class="card">
                 <img src="../images/Palm Jumeirah.jpg" alt="Palm Jumeirah">
-                <h4>Palm Jumeirah</h4>
+                <div class="overlay-card">
+                    <h4>Palm Jumeirah</h4>
+                    <p>Umělý ostrov ve tvaru palmy, plný luxusu.</p>
+                </div>
             </div>
             <div class="card">
                 <img src="../images/Burj Al Arab.jpg" alt="Burj Al Arab">
-                <h4>Burj Al Arab</h4>
+                <div class="overlay-card">
+                    <h4>Burj Al Arab</h4>
+                    <p>Ikonický hotel s unikátní architekturou.</p>
+                </div>
             </div>
             <div class="card">
                 <img src="../images/Dubai Marina.jpg" alt="Dubai Marina">
-                <h4>Dubai Marina</h4>
+                <div class="overlay-card">
+                    <h4>Dubai Marina</h4>
+                    <p>Moderní část města s úchvatnou promenádou.</p>
+                </div>
             </div>
         </div>
     </section>
 </main>
 
-<footer>
+<footer class="dubaj-page">
     <p>&copy; 2025 Cestování a Turistika | 
         <a href="https://validator.w3.org/">Validace HTML</a> | 
         <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
