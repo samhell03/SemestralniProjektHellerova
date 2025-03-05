@@ -1,352 +1,353 @@
+/* Všeobecné nastavení pro všechny elementy */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    margin: 0;  /* Zrušení všech výchozích okrajů pro všechny elementy */
+    padding: 0;  /* Zrušení všech výchozích výplní pro všechny elementy */
+    box-sizing: border-box;  /* Zajištění, že šířka a výška elementu zahrnují i okraje a výplně */
+    font-family: 'Montserrat', sans-serif;  /* Nastavení výchozího fontu pro všechny texty */
 }
 
+/* Nastavení pro tělo stránky */
 body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh;  /* Tělo stránky má minimální výšku 100% výšky viewportu (obrazovky) */
+    display: flex;  /* Nastavení flexboxu pro rozložení obsahu */
+    flex-direction: column;  /* Flexbox uspořádá obsah ve sloupci */
 }
 
+/* Parallax efekt pro pozadí */
 .parallax {
-    background-image: url('images/background2.jpg');
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-    background-color: rgb(156,164,129);
+    background-image: url('images/background2.jpg');  /* Nastavení obrázku jako pozadí pro efekt parallax */
+    min-height: 100vh;  /* Pozadí pokryje minimálně celou výšku obrazovky */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-position: center;  /* Pozadí je zarovnáno na střed */
+    background-repeat: no-repeat;  /* Pozadí se nebudete opakovat */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    display: flex;  /* Flexbox pro uspořádání obsahu */
+    flex-direction: column;  /* Flexbox uspořádá obsah ve sloupci */
+    justify-content: flex-start;  /* Vertikálně zarovná obsah na začátek */
+    align-items: center;  /* Horizontálně zarovná obsah na střed */
+    text-align: center;  /* Zarovná text na střed */
+    padding-top: 50px;  /* Vytvoření 50px mezery nahoře */
+    background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
 }
 
-/* Opraveno pro responzivitu na mobilních zařízeních */
-@media (max-width: 768px) {
-    .parallax {
-        background-attachment: scroll; /* vypnutí parallax efektu na mobilních zařízeních */
-    }
-}
 
+/* Styl pro hlavičku (header) */
 header {
-    background: #565849;  /* Změna na požadovanou barvu pozadí */
-    color: white;  /* Text bílý */
-    padding: 20px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+    background: #2c5474;  /* Tmavě zelené pozadí */
+    color: white;  /* Bílé písmo */
+    padding: 20px;  /* Padding kolem textu */
+    text-align: center;  /* Text zarovnaný na střed */
+    position: relative;  /* Relativní pozice pro z-index */
+    z-index: 1;  /* Zajištění, že hlavička bude nad ostatním obsahem */
 }
 
+/* Styl pro navigační menu */
 nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+    list-style: none;  /* Zrušení výchozího seznamu s odrážkami */
+    display: flex;  /* Flexbox pro uspořádání položek v řadě */
+    justify-content: center;  /* Horizontálně zarovná položky na střed */
+    gap: 20px;  /* Mezera mezi položkami */
 }
 
 nav a {
-    color: white;  /* Text v menu bílý */
-    text-decoration: none;
-    font-size: 18px;
+    color: white;  /* Bílé odkazy v menu */
+    text-decoration: none;  /* Zrušení podtržení textu u odkazů */
+    font-size: 18px;  /* Velikost písma pro odkazy */
 }
 
 nav a:hover {
-    color: white;  /* Hover zůstane bílý */
-    text-decoration: underline;
+    color: white;  /* Text zůstává bílý při najetí myší */
+    text-decoration: underline;  /* Podtržení odkazu při najetí myší */
 }
 
-.hero-text h2 {
-    font-size: 5rem;
-    margin-bottom: 10px;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+nav ul li a {
+    text-decoration: none;
+    color: white; /* Výchozí barva textu */
+    font-size: 1.7rem;
+    padding: 10px;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Plynulá animace */
+}
+
+nav ul li a:hover {
+    background-color: #2b5373; /* Nová barva pozadí při hoveru */
+    color: #ffffff; /* Barva textu při hoveru */
+    border-radius: 5px; /* Zaoblené rohy pro lepší efekt */
+}
+
+/* Styl pro hlavní hero text */
+.hero-text h1 {
+    font-size: 4.5rem;  /* Velká velikost písma pro nadpis */
+    margin-bottom: 10px;  /* Mezery pod nadpisem */
+    color: white;  /* Bílé písmo */
+    text-shadow: 2px 2px 4px #2c5474;
 }
 
 .hero-text p {
-    font-size: 2rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    max-width: 800px;
-    margin: 0 auto;
+    font-size: 2rem;  /* Velikost písma pro text */
+    color: white;  /* Bílé písmo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);  /* Stín pro lepší kontrast textu */
+    max-width: 800px;  /* Maximální šířka textu */
+    margin: 0 auto;  /* Centrovat text horizontálně */
 }
 
+/* Styl pro tlačítka */
 .button {
-    display: inline-block;
-    background-color: #2b5373; /* Změna na modrošedou */
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+    display: inline-block;  /* Tlačítko je inline-block, což znamená, že se chová jako blokový prvek */
+    background-color: #2b5373;  /* Modrošedé pozadí tlačítka */
+    color: white;  /* Bílé písmo tlačítka */
+    padding: 10px 20px;  /* Vnitřní odsazení tlačítka */
+    text-decoration: none;  /* Zrušení podtržení textu u tlačítka */
+    border-radius: 5px;  /* Zaoblení rohů tlačítka */
+    font-size: 1.2rem;  /* Velikost písma */
+    margin-top: 20px;  /* Mezery nad tlačítkem */
+    transition: background-color 0.3s;  /* Přechodová animace pro změnu barvy pozadí */
 }
 
 .button:hover {
-    background-color: #5b6f5d;  /* Změna hover efektu na požadovanou barvu */
+    background-color: #5b6f5d;  /* Změna barvy pozadí při najetí myší */
 }
 
+/* Styl pro sekci destinací */
 .destinations {
-    text-align: center;
-    padding: 40px 0;
+    text-align: center;  /* Zarovnání textu na střed */
+    margin-top: 5px;
+    /*padding: 40px 0;  /* Vertikální odsazení sekce */
 }
 
 .destinations h3 {
     font-size: 3rem;
+    margin: 20px 0 20px;
+    color: white;
+    text-shadow: 2px 2px 4px #2c5474;
+}
+
+.destinations h2 {
+    font-size: 1.2rem;
+    margin: 80px 0 20px;
+    color: black;
+    text-shadow: 2px 2px 4px #2c5474;
+}
+
+.index h3{
+    font-size: 3rem;
     margin: 80px 0 20px;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px #2c5474;  
 }
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
+/* Styl pro jednotlivé karty */
 .card {
-    width: 250px; /* Nastavíme stejnou šířku pro všechny karty */
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    overflow: hidden;
+    width: calc(25% - 20px);  /* Každá karta bude mít šířku 25% kontejneru (s mezerami mezi kartami) */
+    background: white;  /* Bílé pozadí karty */
+    border-radius: 10px;  /* Zaoblení rohů karet */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Stín kolem karet */
+    text-align: center;  /* Text uvnitř karty bude zarovnaný na střed */
+    overflow: hidden;  /* Zabrání přetékání obsahu přes okraje karty */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.card:hover {
+    transform: scale(1.05); /* Zvětší kartu o 10 % */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Přidá stín pro efekt */
+
+}
+
+/* Styl pro kontejnery karet */
+.card-container {
+    display: flex;  /* Flexbox pro rozložení karet */
+    flex-wrap: wrap;  /* Karty se zalamují na novou řadu, pokud není dost místa */
+    justify-content: space-between;  /* Horizontální rozložení karet s mezerami mezi nimi */
+    gap: 20px;  /* Mezera mezi kartami */
+    max-width: 100%;  /* Maximální šířka 100% */
+    padding: 0 30px;  /* Odsazení kontejneru */
+}
+
 
 .card img,
 .card video {
-    width: 100%;
-    height: 180px; /* Nastaví stejnou výšku jako obrázky */
-    object-fit: cover;
-    display: block;
-    pointer-events: none; /* Zabrání nechtěnému kliknutí a otevření na fullscreen */
+    width: 100%;  /* Obrázky a videa vyplní celou šířku karty */
+    height: 220px;  /* Pevná výška pro obrázky a videa */
+    object-fit: cover;  /* Zachování poměru stran pro obrázky a videa */
+    display: block;  /* Zajištění, že obrázek nebo video se zobrazuje jako blokový prvek */
+    pointer-events: none;  /* Zabrání interakci s obrázky a videi (např. kliknutí) */
 }
 
-.card h4 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
+/* Styl pro tlačítka v kartách */
 .card-button {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #1e3a8a;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    font-size: 1.2rem;  /* Zvýšení velikosti písma pro lepší čitelnost */
+    display: inline-block;  /* Tlačítko je inline-block pro správné zobrazení */
+    background-color: #2b5373;  /* Změna barvy pozadí na modrošedou */
+    color: white;  /* Bílé písmo tlačítka */
+    padding: 10px 15px;  /* Vnitřní odsazení tlačítka */
+    text-decoration: none;  /* Zrušení podtržení textu u tlačítka */
+    border-radius: 5px;  /* Zaoblení rohů tlačítka */
+    margin-bottom: 10px;  /* Mezery pod tlačítkem */
+    transition: background-color 0.3s;  /* Plynulý přechod pro změnu barvy pozadí */
 }
 
 .card-button:hover {
-    background-color: #3b5998;
-}
-
-
-.card img {
-    width: 100%;  /* Obrázek vyplní celou šířku karty */
-    height: 220px; /* Pevná výška pro všechny obrázky */
-    object-fit: cover; /* Zachová poměr stran a ořízne nadbytečné části */
-    display: block;
+    background-color: #3b5998;  /* Změna barvy pozadí při najetí na tlačítko */
 }
 
 .card h4 {
-    font-size: 1.5rem;
-    margin: 10px 0;
-    color: #333;
-}
-
-.card-button {
-    display: inline-block;
-    background-color: #2b5373; /* Změna na modrošedou */
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    transition: background-color 0.3s;
+    font-size: 2.2rem;  /* Zvýšení velikosti písma pro nadpisy v kartách */
+    margin: 10px 0;  /* Mezery kolem nadpisu */
+    color: #333;  /* Tmavá barva textu pro lepší čitelnost */
 }
 
 .card-button:hover {
-    background-color: #5b6f5d; /* Změna hover efektu na požadovanou barvu */
+    background-color: #5b6f5d;  /* Změna barvy pozadí při najetí myší */
 }
 
-footer {
-    background: #565849; /* Změna na požadovanou barvu pozadí */
-    color: white;  /* Text bílý */
-    margin-top: auto;
-    text-align: center;
-    padding: 15px;
+.info-card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+.card-container, .info-card-container {
+    max-width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 30px;
 }
 
-footer a {
-    color: white;  /* Odkazy bílá */
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 1200px) {
-    .card {
-        width: calc(33.33% - 15px);
-    }
-}
-
-@media (max-width: 900px) {
-    .card {
-        width: calc(50% - 15px);
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        width: 100%;
-    }
-
-    .destinations h3 {
-        font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Nové styly pro stránku Dubaj (pouze pro dubaj-page) */
-body.dubaj-page {
-    background-color: #f5f5f5; /* Světle šedé pozadí pro stránku */
-    color: #333; /* Tmavší text pro lepší čitelnost */
-}
-
-header.dubaj-page {
-    background: #565849; /* Pozadí v zelené barvě */
-    color: white;
+.info-card, .weather-card {
+    background-color: #f4f4f4;
     padding: 20px;
-    text-align: center;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 320px;
+    text-align: left;
 }
 
-.hero-destination {
-    background-color: rgba(0, 0, 0, 0.4); /* Mírně tmavé pozadí pro lepší čitelnost textu */
-    color: white;
+.destinations h1 {
+    margin-bottom: 10px;
+    font-size: 5rem;
     text-align: center;
-    padding: 10px 0;
-    background-size: cover;
-    background-position: center;
+    margin: 80px 0 20px;
+    color: black;
+    text-shadow: 2px 2px 4px #2c5474;
 }
 
-.hero-destination h1 {
-    font-size: 3rem;
-    font-weight: bold;
-}
 
-/* Sekce s informacemi o destinaci */
+/* Tabulka s počasím */
+/* Styl pro tabulku s počasím */
+
 .destination-info {
     background-color: #fff;
     padding: 40px 20px;
     text-align: center;
 }
 
-.destination-info h2 {
-    font-size: 2.5rem;
-    color: #565849;
+.destination-info table {
+    width: 90%; /* Šířka tabulky je 90% šířky kontejneru */
+    max-width: 700px; /* Maximální šířka tabulky */
+    margin: 40px auto; /* Centrovaní tabulky s mezírkou nahoře a dole */
+    border-collapse: collapse; /* Zrušení mezer mezi buňkami */
+    border-radius: 10px; /* Zaoblení rohů tabulky */
+    background-color: #ffffff; /* Bílé pozadí pro tabulku */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 30); /* Stín kolem tabulky pro efekt */
 }
 
-.destination-info p {
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
+/* Záhlaví tabulky */
+.destination-info table th {
+    padding: 12px 15px; /* Vnitřní odsazení v záhlaví */
+    background-color: #2c5474; /* Modré pozadí pro záhlaví */
+    color: white; /* Bílé písmo */
+    font-size: 1.2rem; /* Velikost písma */
+    text-transform: uppercase; /* Všechna písmena velká */
+    text-align: center; /* Zarovnání textu na střed */
+    border: 1px solid #ddd; /* Světle šedý okraj pro buňky záhlaví */
 }
 
-/* Nejlepší místa k návštěvě */
-.destinations.dubaj-page {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #e8e8e8; /* Světle šedé pozadí pro tuto sekci */
+/* Buňky tabulky */
+.destination-info table td {
+    padding: 10px 15px; /* Vnitřní odsazení pro buňky */
+    text-align: center; /* Zarovnání textu na střed */
+    font-size: 1rem; /* Velikost písma */
+    color: #333; /* Tmavá barva textu pro lepší čitelnost */
+    border: 1px solid #ddd; /* Světle šedý okraj pro buňky */
 }
 
-.destinations h3 {
-    font-size: 2.5rem;
-    color: #fff;
-    margin-bottom: 30px;
+/* Styl pro sudé řádky - světlejší pozadí */
+.destination-info table tr:nth-child(even) {
+    background-color: #f7f7f7; /* Světle šedé pozadí pro sudé řádky */
 }
 
-.card-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    padding: 0 20px;
+/* Efekt při najetí na řádek - změna barvy */
+.destination-info table tr:hover {
+    background-color: #2c547428; /* Světle modrá pro zvýraznění při hoveru */
+    cursor: pointer; /* Změna kurzoru na ruku */
 }
 
-.card {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    width: calc(25% - 20px);
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+/* Styl pro patičku */
+footer {
+    background: #2c5474;  /* Zelené pozadí patičky */
+    color: white;  /* Bílé písmo v patičce */
+    margin-top: auto;  /* Automatické zarovnání patičky na spodní část */
+    text-align: center;  /* Text v patičce na střed */
+    padding: 15px;  /* Odsazení kolem textu */
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 10px 0;
-}
-
-/* Patička pro stránku Dubaj */
-footer.dubaj-page {
-    background: #565849;
-    color: white;
-    text-align: center;
-    padding: 15px;
-}
-
+/* Styl pro odkazy v patičce */
 footer a {
-    color: #ffffff;
-    text-decoration: none;
+    color: white;  /* Bílé odkazy v patičce */
+    text-decoration: none;  /* Zrušení podtržení odkazů */
 }
 
 footer a:hover {
-    text-decoration: underline;
+    text-decoration: underline;  /* Podtržení odkazu při najetí */
 }
 
+/* Média query pro zařízení s maximální šířkou 768px */
 @media (max-width: 768px) {
-    .hero-destination h1 {
-        font-size: 2rem;
+    /* Změna velikosti písma pro všechny h1 */
+    h1 {
+        font-size: 2rem;  /* Změna velikosti písma pro všechny h1 na menší velikost */
     }
 
+    /* Nastavení šířky karty na 50% šířky kontejneru s 20px mezerou mezi kartami */
     .card {
-        width: calc(50% - 20px);
+        width: calc(50% - 20px);  /* Karty budou mít šířku 50% kontejneru, s 20px mezerou mezi nimi */
+    }
+    .parallax {
+        background-attachment: scroll; /* Vypnutí efektu parallax na mobilních zařízeních */
+    }
+
+    /* Úpravy pro navigaci */
+    nav ul {
+        flex-direction: column;  /* Přepne menu do sloupce */
+        align-items: center;  /* Zarovná odkazy na střed */
+        gap: 10px;  /* Zmenší mezery mezi položkami */
+        text-align: center;
+        display: block;
+        padding: 12px;
+    }
+
+    nav ul li {
+        width: 100%;  /* Položky budou mít celou šířku */
+        text-align: center;  /* Zarovnání textu na střed */
+    }
+
+    nav ul li a {
+        display: block;  /* Změní odkazy na blokové prvky (celá šířka) */
+        padding: 12px;  /* Větší prostor pro snazší klikání */
     }
 }
 
+
+/* Média query pro zařízení s maximální šířkou 600px (např. mobilní telefony) */
 @media (max-width: 600px) {
+    /* Nastavení šířky karty na 100% šířky kontejneru (karty budou zabírat celou šířku) */
     .card {
-        width: 100%;
+        width: 100%;  /* Karty budou mít šířku 100%, což znamená, že se roztáhnou přes celou šířku kontejneru */
     }
+    h1{
+        font-size: 1rem;
+    }
+    
 }

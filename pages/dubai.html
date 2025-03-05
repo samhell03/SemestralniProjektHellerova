@@ -8,8 +8,7 @@
     <title>Dubaj - Destinace</title>
 </head>
 <body class="dubaj-page">
-
-<header class="dubaj-page">
+<header>
     <nav>
         <ul>
             <li><a href="../index.html">Domů</a></li>
@@ -21,20 +20,58 @@
 </header>
 
 <main>
-    <section class="hero-destination" style="background-image: url('../images/dubai-banner.jpg');">
-        <div class="overlay">
-            <h1>Objevte krásu Dubaje</h1>
+    <section class="hero-destination" class="destination">
+            <h1>Dubaj</h1>
             <p>Nejluxusnější město světa, plné zázraků architektury a fascinující historie.</p>
-        </div>
     </section>
     
-    <section id="destinace" class="destination-info">
-        <h2>O Dubaji</h2>
-        <p>Dubaj je jedním z nejluxusnějších a nejmodernějších měst na světě. Známá je svými mrakodrapy, umělými ostrovy a bohatou kulturou.</p>
-    </section>
+    <!--<section id="destinace">-->
+        <div class="destination-info">
+            <div class="info-card-container">
+                <div class="weather-card">
+                    <h2>Počasí v Dubaji</h2>
+                    <p>Dubaj má horké pouštní klima, které přináší velmi vysoké teploty po celý rok. Nejvhodnějším obdobím pro návštěvu jsou zimní měsíce, kdy teploty nejsou tak extrémně vysoké. V létě teploty často přesahují 40°C, což je ideální pro ty, kteří milují vedro. Mořská voda zůstává teplá po celý rok, takže si můžete užívat koupání i během chladnějších měsíců.</p>
+                </div>
+
+                <div class="info-card">
+                    <h2>O Dubaji</h2>
+                    <p>Dubaj je jedno z nejmodernějších měst na světě, které se nachází v Spojených arabských emirátech. Město je známé pro svou luxusní architekturu, ultramoderní infrastrukturu, impozantní mrakodrapy a neuvěřitelné umělé ostrovy.</p>
+                    <p>V Dubaji najdete nejen nejvyšší budovu světa – Burj Khalifa, ale i obrovské obchodní centra, luxusní hotely a desítky atrakcí, které přitahují turisty z celého světa. Město se nachází v jednom z nejteplejších klimatických pásmech, což z něj činí ideální místo pro milovníky slunečných pláží a horkého počasí.</p>
+                </div>
+            </div>
+        
+    <!--</section>-->
+
+    <!-- Tabulka s počasím pod kartami -->
+    <h2 class="destination h2">Roční počasí v Dubaji</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Měsíc</th>
+            <th>Průměrná teplota (°C)</th>
+            <th>Teplota moře (°C)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Leden</td><td>18-25</td><td>22</td></tr>
+        <tr><td>Únor</td><td>19-26</td><td>22</td></tr>
+        <tr><td>Březen</td><td>21-28</td><td>23</td></tr>
+        <tr><td>Duben</td><td>24-33</td><td>24</td></tr>
+        <tr><td>Květen</td><td>28-38</td><td>27</td></tr>
+        <tr><td>Červen</td><td>31-41</td><td>29</td></tr>
+        <tr><td>Červenec</td><td>33-43</td><td>30</td></tr>
+        <tr><td>Srpen</td><td>33-44</td><td>31</td></tr>
+        <tr><td>Září</td><td>30-40</td><td>30</td></tr>
+        <tr><td>Říjen</td><td>26-36</td><td>28</td></tr>
+        <tr><td>Listopad</td><td>22-30</td><td>26</td></tr>
+        <tr><td>Prosinec</td><td>19-26</td><td>24</td></tr>
+    </tbody>
+</table>
+</div>
+
 
     <section class="destinations dubaj-page">
-        <h3>Nejlepší místa k návštěvě</h3>
+        <h3 class="description h3">Nejlepší místa k návštěvě</h3>
         <div class="card-container">
             <div class="card">
                 <img src="../images/Burj Khalifa.jpg" alt="Burj Khalifa">
