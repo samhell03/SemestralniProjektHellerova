@@ -4,7 +4,9 @@
     padding: 0;  /* Zrušení všech výchozích výplní pro všechny elementy */
     box-sizing: border-box;  /* Zajištění, že šířka a výška elementu zahrnují i okraje a výplně */
     font-family: 'Montserrat', sans-serif;  /* Nastavení výchozího fontu pro všechny texty */
+    text-align: center;
 }
+
 
 /* Nastavení pro tělo stránky */
 body {
@@ -122,11 +124,24 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px #2c5474;
 }
 
-.destinations h2 {
-    font-size: 1.2rem;
-    margin: 80px 0 20px;
+.dubaj-page h1{
+    font-size: 4.5rem;
     color: black;
     text-shadow: 2px 2px 4px #2c5474;
+    margin: 20px 0 20px;
+}
+
+.dubaj-page h2 {
+    font-size: 3rem;
+    color: black;
+    text-shadow: 2px 2px 4px #2c5474;
+    margin: 20px 0 20px;
+}
+
+.dubaj-page h3 {
+    font-size: 2rem;
+    color: #2c5474;
+    text-shadow: 2px 2px 4px white;
 }
 
 .index h3{
@@ -134,6 +149,17 @@ nav ul li a:hover {
     margin: 80px 0 20px;
     color: white;
     text-shadow: 2px 2px 4px #2c5474;  
+}
+
+.text {
+    margin: 20px 0;
+    background-color: #2c5474;
+    height: 50px;
+    display: flex;
+    align-items: center; /* Zarovná vertikálně */
+    justify-content: center; /* Zarovná horizontálně */
+    color: white;
+    font-size: 1.5rem;
 }
 
 /* Styl pro jednotlivé karty */
@@ -159,8 +185,7 @@ nav ul li a:hover {
     flex-wrap: wrap;  /* Karty se zalamují na novou řadu, pokud není dost místa */
     justify-content: space-between;  /* Horizontální rozložení karet s mezerami mezi nimi */
     gap: 20px;  /* Mezera mezi kartami */
-    max-width: 100%;  /* Maximální šířka 100% */
-    padding: 0 30px;  /* Odsazení kontejneru */
+    padding: 20px;
 }
 
 
@@ -205,16 +230,11 @@ nav ul li a:hover {
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-.card-container, .info-card-container {
-    max-width: 100%;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 0 30px;
+    margin: 30px;
 }
 
-.info-card, .weather-card {
+.info-card, 
+.weather-card {
     background-color: #f4f4f4;
     padding: 20px;
     border-radius: 8px;
@@ -223,6 +243,13 @@ nav ul li a:hover {
     min-width: 320px;
     text-align: left;
 }
+
+.info-card p, .weather-card p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.6;
+}
+
 
 .destinations h1 {
     margin-bottom: 10px;
@@ -235,11 +262,8 @@ nav ul li a:hover {
 
 
 /* Tabulka s počasím */
-/* Styl pro tabulku s počasím */
-
 .destination-info {
-    background-color: #fff;
-    padding: 40px 20px;
+    /*background-color: #fff;*/
     text-align: center;
 }
 
@@ -251,6 +275,7 @@ nav ul li a:hover {
     border-radius: 10px; /* Zaoblení rohů tabulky */
     background-color: #ffffff; /* Bílé pozadí pro tabulku */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 30); /* Stín kolem tabulky pro efekt */
+    border-collapse: collapse;
 }
 
 /* Záhlaví tabulky */
@@ -258,7 +283,7 @@ nav ul li a:hover {
     padding: 12px 15px; /* Vnitřní odsazení v záhlaví */
     background-color: #2c5474; /* Modré pozadí pro záhlaví */
     color: white; /* Bílé písmo */
-    font-size: 1.2rem; /* Velikost písma */
+    font-size: 1rem; /* Velikost písma */
     text-transform: uppercase; /* Všechna písmena velká */
     text-align: center; /* Zarovnání textu na střed */
     border: 1px solid #ddd; /* Světle šedý okraj pro buňky záhlaví */
@@ -291,6 +316,7 @@ footer {
     margin-top: auto;  /* Automatické zarovnání patičky na spodní část */
     text-align: center;  /* Text v patičce na střed */
     padding: 15px;  /* Odsazení kolem textu */
+    
 }
 
 /* Styl pro odkazy v patičce */
@@ -307,7 +333,7 @@ footer a:hover {
 @media (max-width: 768px) {
     /* Změna velikosti písma pro všechny h1 */
     h1 {
-        font-size: 2rem;  /* Změna velikosti písma pro všechny h1 na menší velikost */
+        font-size: 1.7rem;  /* Změna velikosti písma pro všechny h1 na menší velikost */
     }
 
     /* Nastavení šířky karty na 50% šířky kontejneru s 20px mezerou mezi kartami */
