@@ -164,6 +164,7 @@ nav ul li a:hover {
 
 /* Styl pro jednotlivé karty */
 .card {
+    position: relative;
     width: calc(25% - 20px);  /* Každá karta bude mít šířku 25% kontejneru (s mezerami mezi kartami) */
     background: white;  /* Bílé pozadí karty */
     border-radius: 10px;  /* Zaoblení rohů karet */
@@ -172,6 +173,8 @@ nav ul li a:hover {
     overflow: hidden;  /* Zabrání přetékání obsahu přes okraje karty */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+
 
 .card:hover {
     transform: scale(1.05); /* Zvětší kartu o 10 % */
@@ -196,6 +199,34 @@ nav ul li a:hover {
     object-fit: cover;  /* Zachování poměru stran pro obrázky a videa */
     display: block;  /* Zajištění, že obrázek nebo video se zobrazuje jako blokový prvek */
     pointer-events: none;  /* Zabrání interakci s obrázky a videi (např. kliknutí) */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 220px;
+    background: rgba(0, 0, 0, 0.7); /* Černé průhledné pozadí */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 15px;
+    text-align: center;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Styl pro tlačítka v kartách */
