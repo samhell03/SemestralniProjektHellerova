@@ -3,37 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O naší stránce</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dubaj - Destinace</title>
 </head>
-<body>
+<body class="dubaj-page">
 
-<header>
-    <h1>Cestování a Turistika</h1>
-    <nav>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Domů</a></li>
+                <li><a href="o-nasi-strance.html">O nás</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Destinace</a>
+                    <div class="dropdown-content">
+                        <a href="dubai.html">Dubaj</a>
+                        <a href="egypt.html">Egypt</a>
+                        <a href="paris.html">Paříž</a>
+                        <a href="thailand.html">Thajsko</a>
+                    </div>
+                </li>
+                <li><a href="poptavka.html">Poptávka</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="travel-why">
+        <h3>Co u nás najdete?</h3>
         <ul>
-            <li><a href="index.html">Domů</a></li>
-            <li><a href="destinace.html">Destinace</a></li>
-            <li><a href="tipy.html">Tipy</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
+            <li>Seznam top destinací – Přiblížíme vám nejkrásnější místa světa jako je Dubaj, Egypt, Paříž nebo Thajska.</li>
+            <li>Pomůžeme vám s plánováním cesty, výběrem ubytování i doporučením nejlepších atrakcí <a href="#travel-tips">zde</a></li>
+            <li>Jednoduchá poptávka – Pokud vás některá destinace zaujme, můžete snadno odeslat poptávku a získat více informací.</li>
         </ul>
-    </nav>
-</header>
-
-<main> 
-    <section class="about">
-        <h3>O naší stránce</h3>
-        <p>Tato stránka je věnována všem milovníkům cestování a objevování nových míst. Najdete zde tipy na nejlepší destinace, praktické rady pro plánování vašich cest a inspiraci k objevování krás světa.</p>
-        <p>Ať už plánujete víkendový výlet nebo dlouhou dovolenou, naším cílem je poskytnout vám cenné informace a nápady, které vám pomohou zažít nezapomenutelné dobrodružství. Připojte se k nám na této cestě a objevujte společně s námi!</p>
+    
+        <h3>Proč právě my?</h3>
+        <ul>
+            <li>🌍 Pečlivě vybíráme destinace, které stojí za to navštívit.</li>
+            <li>📖 Poskytujeme srozumitelné a přehledné informace pro každého cestovatele.</li>
+            <li>💡 Inspirujeme k objevování nových míst a kultur.</li>
+        </ul>
     </section>
-</main>
+    
+    
+    <h2> Jaké destinace nabízíme? </h2>
+        <div class="poptavka-container">
+            <div class="poptavka-card">
+                <h4>Dubaj</h4>
+                <ul>
+                    <li>Burdž Chalífa</li>
+                    <li>Dubai Mall</li>
+                    <li>Pláže Jumeirah</li>
+                </ul>
+                <a href="poptavka.html" class="button">Odeslat poptávku</a>
+            </div>
+    
+            <div class="poptavka-card">
+                <h4>Egypt</h4>
+                <ul>
+                    <li>Velká pyramida v Gíze</li>
+                    <li>Káhira</li>
+                    <li>Luxor a Údolí králů</li>
+                </ul>
+                <a href="poptavka.html" class="button">Odeslat poptávku</a>
+            </div>
+    
+            <div class="poptavka-card">
+                <h4>Paříž</h4>
+                <ul>
+                    <li>Eiffelova věž</li>
+                    <li>Louvre</li>
+                    <li>Montmartre</li>
+                </ul>
+                <a href="poptavka.html" class="button">Odeslat poptávku</a>
+            </div>
+    
+            <div class="poptavka-card">
+                <h4>Thajsko</h4>
+                <ul>
+                    <li>Bangkok</li>
+                    <li>Phuket</li>
+                    <li>Ao Nang</li>
+                </ul>
+                <a href="poptavka.html" class="button">Odeslat poptávku</a>
+            </div>
+        </div>
+    </section>
+    
+        
+        
 
-<footer>
-    <p>&copy; 2025 Cestování a Turistika | 
-        <a href="https://validator.w3.org/">Validace HTML</a> | 
-        <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
-    </p>
-</footer>
-</body>
-</html>
+    <section id="travel-tips" class="travel-tips">
+            <h3>Užitečné tipy pro cestování</h3>
+            <ul>
+                <li>Plánujte dopředu, abyste ušetřili na letenkách a ubytování.</li>
+                <li>Vždy si udělejte kopie důležitých dokumentů (pas, víza, letenky).</li>
+                <li>Investujte do cestovního pojištění pro případ nečekaných událostí.</li>
+                <li>Seznamte se s místními zvyky a kulturou před cestou.</li>
+                <li>Nezapomeňte na aplikace pro navigaci a překladatel.</li>
+                <li>Udržujte svou elektroniku nabitou a mějte s sebou powerbanku.</li>
+                <li>Otestujte místní kuchyni, ale buďte opatrní s novými potravinami.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="egypt-page">
+        <p>&copy; 2025 Cestování a Turistika | 
+            <a href="https://validator.w3.org/">Validace HTML</a> | 
+            <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
+        </p>
+    </footer>
+    
+    </body>
+    </html>
+    

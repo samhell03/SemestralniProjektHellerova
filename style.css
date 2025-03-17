@@ -43,6 +43,216 @@ header {
     z-index: 1;  /* Zajištění, že hlavička bude nad ostatním obsahem */
 }
 
+.poptavka-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+}
+
+.poptavka-card {
+    background: linear-gradient(135deg, #f4f4f4, #f4f4f4);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+
+
+/* Animovaný efekt na horním okraji karty */
+.poptavka-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 100%;
+    height: 5px;
+    background: #2c5474;
+    transform: translateX(-50%);
+    transition: height 0.3s ease;
+}
+
+.poptavka-card:hover::before {
+    height: 10px;
+}
+
+/* Nadpis karty */
+.poptavka-card h4 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* Seznam s odrážkami */
+.poptavka-card ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.poptavka-card li {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+}
+
+.poptavka-card li:hover {
+    background: #e3f2fd;
+}
+
+/* Styl odrážek */
+.poptavka-card li::before {
+    content: "•";
+    color: #2c5474;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Tlačítko */
+.poptavka-card button {
+    background: #2c5474;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.poptavka-card button:hover {
+    background: #2c547428;
+    transform: scale(1.05);
+}
+
+.travel-tips {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.travel-tips h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.travel-tips ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.travel-tips li {
+    background: #ffffff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.travel-tips li:hover {
+    background-color: #e0e4ec;
+    transform: translateY(-5px);
+}
+
+.travel-tips li::before {
+    content: "✔";
+    color: #2b5373;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.travel-tips li:last-child {
+    margin-bottom: 0;
+}
+
+
+.travel-why {
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Flexbox pro zobrazení kartiček vedle sebe */
+.travel-why ul {
+    display: flex;
+    flex-wrap: wrap;  /* Karty se přizpůsobí na nový řádek, pokud je to nutné */
+    gap: 20px;  /* Mezery mezi kartami */
+    justify-content: space-between; /* Rovnoměrné rozmístění karet */
+    margin: 10px;
+}
+
+.travel-why li {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, transform 0.3s ease;
+    flex: 1 1 calc(33.333% - 20px); /* Každý prvek zabírá 1/3 šířky s mezerou */
+    margin-bottom: 10px;
+}
+
+/* Efekt při najetí na položku */
+.travel-why li:hover {
+    background-color: #e0e4ec;
+    transform: translateY(-5px);
+}
+
+/* Změna velikosti ikon nebo textu podle potřeby */
+.travel-why li::before {
+    content: "✔"; /* Příklad odrážky, kterou můžeš upravit */
+    color: #2b5373;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+/* Zajistí, že na mobilních zařízeních budou karty pod sebou */
+@media (max-width: 600px) {
+    .travel-why li {
+        flex: 1 1 100%; /* Karty budou mít 100% šířky */
+        max-width: 100%;
+    }
+}
+        
+
+
+
+/* Responsivita */
+@media (max-width: 600px) {
+    .poptavka-card {
+        width: 100%;
+    }
+}
+
+
+
 /* Styl pro navigační menu */
 nav ul {
     list-style: none;  /* Zrušení výchozího seznamu s odrážkami */
@@ -51,6 +261,7 @@ nav ul {
     gap: 20px;  /* Mezera mezi položkami */
 }
 
+/* Styl pro hlavní odkazy v menu */
 nav a {
     color: white;  /* Bílé odkazy v menu */
     text-decoration: none;  /* Zrušení podtržení textu u odkazů */
@@ -62,6 +273,7 @@ nav a:hover {
     text-decoration: underline;  /* Podtržení odkazu při najetí myší */
 }
 
+/* Styl pro jednotlivé položky menu */
 nav ul li a {
     text-decoration: none;
     color: white; /* Výchozí barva textu */
@@ -75,6 +287,38 @@ nav ul li a:hover {
     background-color: #2b5373; /* Nová barva pozadí při hoveru */
     color: #ffffff; /* Barva textu při hoveru */
     border-radius: 5px; /* Zaoblené rohy pro lepší efekt */
+}
+
+/* Styl pro rozbalovací nabídku */
+li.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.4rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #2c547428;
+    color: #000000; /* Barva textu při hoveru */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Styl pro hlavní hero text */
@@ -124,7 +368,14 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px #2c5474;
 }
 
-.dubaj-page h1{
+h1{
+    font-size: 4.5rem;
+    color: black;
+    text-shadow: 2px 2px 4px #2c5474;
+    margin: 20px 0 20px;
+}
+
+.poptavka-page h1{
     font-size: 4.5rem;
     color: black;
     text-shadow: 2px 2px 4px #2c5474;
@@ -154,13 +405,16 @@ nav ul li a:hover {
 .text {
     margin: 20px 0;
     background-color: #2c5474;
-    height: 50px;
+    height: 80px;
+    width: 100%; /* Pozadí se přizpůsobí šířce obrazovky */
     display: flex;
     align-items: center; /* Zarovná vertikálně */
     justify-content: center; /* Zarovná horizontálně */
     color: white;
     font-size: 1.5rem;
+    box-sizing: border-box; /* Zajistí, že padding a margin neovlivní šířku */
 }
+
 
 /* Styl pro jednotlivé karty */
 .card {
@@ -367,6 +621,11 @@ footer a:hover {
         font-size: 1.7rem;  /* Změna velikosti písma pro všechny h1 na menší velikost */
     }
 
+    .text {
+        font-size: 5vw; /* Zvýší velikost textu na menších obrazovkách */
+        height: 15vh; /* Nastaví výšku na 10% výšky obrazovky */
+    }
+
     /* Nastavení šířky karty na 50% šířky kontejneru s 20px mezerou mezi kartami */
     .card {
         width: calc(50% - 20px);  /* Karty budou mít šířku 50% kontejneru, s 20px mezerou mezi nimi */
@@ -404,7 +663,175 @@ footer a:hover {
         width: 100%;  /* Karty budou mít šířku 100%, což znamená, že se roztáhnou přes celou šířku kontejneru */
     }
     h1{
-        font-size: 1rem;
+        font-size: 3rem;
+    }
+
+    .poptavka-container {
+        gap: 20px; /* Zmenší rozestupy mezi kartami */
+    }
+
+    .poptavka-card {
+        width: 100%;
+        margin: 5px; /* Zmenší vnější okraje karty */
+        padding: 15px; /* Mírně menší padding */
+    }
+
+    .poptavka-card h4 {
+        font-size: 20px; /* Mírně menší nadpis */
+    }
+
+    .poptavka-card li {
+        padding: 8px; /* Menší padding v seznamu */
+        margin-bottom: 5px; /* Menší mezera mezi položkami */
+    }
+
+    .poptavka-card button {
+        padding: 8px 15px; /* Menší tlačítko */
+        font-size: 14px;
     }
     
 }
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 5.5vw; /* Ještě větší text pro malé obrazovky */
+        height: 14vh; /* Zvýší výšku pozadí na malých zařízeních */
+    }
+}
+
+/* Styl pro formulář v kartičce */
+.form-container {
+    background-color: white; /* Bílé pozadí formuláře */
+    border-radius: 10px; /* Zaoblení rohů */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Větší stín pro efekt karty */
+    padding: 40px; /* Větší vnitřní odsazení pro lepší vzhled */
+    max-width: 600px; /* Maximální šířka formuláře */
+    margin: 50px auto; /* Centrovaný formulář s větší mezerou nahoře a dole */
+    font-size: 1.2rem; /* Větší písmo pro lepší čitelnost */
+    background-image: linear-gradient(to bottom right, #f0f4f8, #ffffff); /* Jemný gradient pozadí */
+}
+
+/* Styl pro vstupní pole a textarea ve formuláři */
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%; /* Vstupy budou zabírat celou šířku formuláře */
+    padding: 12px; /* Vnitřní odsazení pro větší komfort */
+    margin-bottom: 20px; /* Mezery mezi jednotlivými prvky */
+    border: 1px solid #ddd; /* Světle šedý okraj */
+    border-radius: 8px; /* Zaoblení rohů polí */
+    font-size: 1rem; /* Velikost písma pro vstupy */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Plynulý přechod pro změnu barvy okraje a stínu */
+}
+
+/* Efekt na vstupních polích při najetí */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+    border-color: #2b5373; /* Změna barvy okraje při zaostření */
+    outline: none; /* Zrušení výchozího rámečku */
+    box-shadow: 0 0 5px rgba(43, 83, 115, 0.5); /* Jemný stín pro zvýraznění */
+}
+
+/* Styl pro tlačítko odeslání formuláře */
+.form-container button {
+    background-color: #2b5373; /* Modrošedé pozadí tlačítka */
+    color: white; /* Bílé písmo */
+    padding: 15px 30px; /* Větší odsazení pro tlačítko */
+    border: none; /* Žádný okraj */
+    border-radius: 5px; /* Zaoblení rohů */
+    font-size: 1.2rem; /* Velikost písma pro tlačítko */
+    cursor: pointer; /* Ukazatel ve tvaru ruky */
+    transition: background-color 0.3s, transform 0.2s; /* Plynulý přechod pro změnu barvy a animaci */
+}
+
+/* Efekt na tlačítku při najetí myší */
+.form-container button:hover {
+    background-color: #5b6f5d; /* Změna barvy pozadí při hoveru */
+    transform: scale(1.05); /* Zvýraznění tlačítka při hoveru */
+}
+
+/* Formulář a jeho prvky */
+#poptavkaForm {
+    background-color: #f9f9f9;  /* Světle šedé pozadí pro formulář */
+    padding: 25px;  /* Odsazení pro formulář */
+    border-radius: 12px;  /* Zaoblení rohů formuláře */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);  /* Větší stín kolem formuláře */
+    margin: 40px auto;  /* Centrované umístění formuláře */
+    width: 90%;  /* Formulář bude mít šířku 90% kontejneru */
+    max-width: 600px;  /* Maximální šířka formuláře */
+    background-color: #ffffff;  /* Bílá barva pozadí formuláře */
+}
+
+/* Styl pro nadpis formuláře */
+#poptavkaForm legend {
+    font-size: 1.8rem;  /* Velikost písma pro nadpis formuláře */
+    color: #333;  /* Tmavý text pro nadpis */
+    margin-bottom: 20px;  /* Mezery pod nadpisem */
+}
+
+/* Styl pro popisky */
+#poptavkaForm label {
+    font-size: 1.1rem;  /* Velikost písma pro popisky */
+    margin-bottom: 5px;  /* Mezery pod popisky */
+    display: block;  /* Zajistí, že popisky budou na samostatných řádcích */
+    color: #444;  /* Tmavý text */
+}
+
+/* Styl pro input a select pole */
+#poptavkaForm input,
+#poptavkaForm select {
+    width: 100%;  /* Input a select budou mít šířku 100% */
+    padding: 12px;  /* Vnitřní odsazení pro textová pole */
+    margin-bottom: 18px;  /* Mezery mezi jednotlivými poli */
+    border-radius: 8px;  /* Zaoblení rohů polí */
+    border: 1px solid #ccc;  /* Světle šedý okraj kolem polí */
+    font-size: 1rem;  /* Velikost písma */
+    transition: border-color 0.3s, box-shadow 0.3s ease;  /* Plynulý přechod pro změnu barvy okraje */
+}
+
+#poptavkaForm input:focus,
+#poptavkaForm select:focus {
+    border-color: #2b5373;  /* Změna barvy okraje při zaostření */
+    box-shadow: 0 0 5px rgba(43, 83, 115, 0.5);  /* Jemný stín pro zvýraznění */
+}
+
+/* Styl pro tlačítko formuláře */
+#poptavkaForm button {
+    background-color: #2b5373;  /* Modrošedé pozadí tlačítka */
+    color: white;  /* Bílé písmo na tlačítku */
+    padding: 12px 25px;  /* Vnitřní odsazení tlačítka */
+    border: none;  /* Bez okraje */
+    border-radius: 8px;  /* Zaoblení rohů tlačítka */
+    font-size: 1.2rem;  /* Velikost písma tlačítka */
+    cursor: pointer;  /* Změna kurzoru při najetí na tlačítko */
+    transition: background-color 0.3s ease, transform 0.2s;  /* Plynulý přechod pro změnu barvy pozadí */
+}
+
+/* Efekt na tlačítku při hoveru */
+#poptavkaForm button:hover {
+    background-color: #5b6f5d;  /* Změna barvy pozadí při hoveru */
+    transform: scale(1.05);  /* Zvýraznění tlačítka při hoveru */
+}
+
+/* Styl pro potvrzení odeslání poptávky */
+#potvrzeni {
+    display: none;  /* Výchozí nastavení je skrytí potvrzení */
+    text-align: center;  /* Zarovnání textu na střed */
+    margin-top: 40px;  /* Mezery nad potvrzením */
+}
+
+#potvrzeni svg {
+    width: 120px;  /* Šířka SVG obrázku */
+    height: 120px;  /* Výška SVG obrázku */
+    margin-bottom: 25px;  /* Mezery pod obrázkem */
+}
+
+#potvrzeni p {
+    font-size: 1.6rem;  /* Velikost písma pro text potvrzení */
+    color: #333;  /* Tmavý text pro potvrzení */
+    margin-top: 15px;  /* Mezery nad textem */
+}
+
+
+
