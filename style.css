@@ -942,6 +942,7 @@ footer a:hover {
     border-collapse: collapse;
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
+    max-width: 750px;
 }
 
 .letenky caption {
