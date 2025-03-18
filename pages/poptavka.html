@@ -27,16 +27,11 @@
             </ul>
         </nav>
     </header>
-    
 
 <main class="main-container">
     <section id="poptavka" class="poptavka-section">
         <h1>Formulář</h1>
-        <!--<p class="text">Neváhejte nás kontaktovat, sjednejte si individuální konzultaci a zjistěte potřebné informace!</p>-->
-        <div id="destinaceImage" class="destinace-image" style="display: none;">
-            <img src="https://via.placeholder.com/600x400?text=Egypt" alt="Egypt" id="egyptImage" class="destinace-img">
-        </div>
-
+        
         <form id="poptavkaForm" class="form-container">
             <fieldset>
                 <legend class="form-legend">Poptávka destinace</legend>
@@ -45,8 +40,22 @@
                 <input type="text" id="jmeno" name="jmeno" class="form-input" required>
                 
                 <label for="email" class="form-label">E-mail:</label>
-                <input type="email" id="email" name="email" class="form-input" required>
-                
+                <input type="email" id="email" name="email" class="form-input" placeholder="email@domena.cz" required>
+
+
+                <label for="telefon" class="form-label">Telefonní číslo:</label>
+                <div class="phone-container">
+                    <select id="predvolba" name="predvolba" class="form-input" required>
+                        <option value="+420">+420 (Česká republika)</option>
+                        <option value="+49">+49 (Německo)</option>
+                        <option value="+421">+421 (Slovensko)</option>
+                        <option value="+48">+48 (Polsko)</option>
+                    </select>
+                    <input type="tel" id="telefon" name="telefon" class="form-input" placeholder="Telefonní číslo" required
+                    pattern="^[0-9]{9}$"
+                        title="Telefonní číslo musí obsahovat právě 9 číslic.">
+                </div>
+        
                 <label for="destinace" class="form-label">Vyberte destinaci:</label>
                 <select id="destinace" name="destinace" class="form-input" required>
                     <option value="dubaj">Dubaj</option>
@@ -54,56 +63,78 @@
                     <option value="pariz">Paříž</option>
                     <option value="thajsko">Thajsko</option>
                 </select>
-
+        
                 <button type="submit" class="form-submit-btn">Odeslat poptávku</button>
             </fieldset>
         </form>
-        
-        <div id="potvrzeni" class="confirmation-message">
+        <div id="potvrzeni" class="confirmation-message" style="display: none;">
             <svg width="100" height="100" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" fill= "green" />
+                <circle cx="50" cy="50" r="40" fill="green" />
                 <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="5" fill="none"/>
             </svg>
             <p>Poptávka byla úspěšně odeslána!</p>
         </div>
     </section>
+
+    <table class="letenky">
+        <h2>Kdy je to nejvýhodnější?</h2>
+        <thead>
+            <tr>
+                <th rowspan="2">Destinace</th>
+                <th colspan="2">Nejlevnější letenky</th>
+            </tr>
+            <tr>
+                <th>Jednosměrná</th>
+                <th>Obousměrná</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">Dubaj</td>
+                <td>4 990 Kč (leden 2025)</td>
+                <td>11 000 Kč (leden 2025)</td>
+            </tr>
+            <tr>
+                <td>6 000 Kč (jaro 2025)</td>
+                <td>12 000 Kč (jaro 2025)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Egypt</td>
+                <td>4 500 Kč (jaro 2025)</td>
+                <td>8 200 Kč (jaro 2025)</td>
+            </tr>
+            <tr>
+                <td>5 000 Kč (podzim 2025)</td>
+                <td>9 000 Kč (podzim 2025)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Paříž</td>
+                <td>1 500 Kč (jaro 2025)</td>
+                <td>2 800 Kč (jaro 2025)</td>
+            </tr>
+            <tr>
+                <td>1 700 Kč (podzim 2025)</td>
+                <td>3 000 Kč (podzim 2025)</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Thajsko</td>
+                <td>5 500 Kč (září 2025)</td>
+                <td>10 000 Kč (září 2025)</td>
+            </tr>
+            <tr>
+                <td>5 167 Kč (říjen 2025)</td>
+                <td>9 500 Kč (říjen 2025)</td>
+            </tr>
+        </tbody>
+    </table>
+
 </main>
 
 <footer>
-    <p>&copy; 2025 Cestování a Turistika 
-    </p>
+    <p>&copy; 2025 Cestování a Turistika</p>
     <a href="https://validator.w3.org/">Validace HTML</a> 
     <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
 </footer>
-
-</body>
-</html>
-
-
-    
-    
-    
-    
-    
-    <script>
-    document.getElementById("poptavkaForm").addEventListener("submit", function(event) {
-        event.preventDefault(); // Zabraňuje standardnímu odeslání formuláře
-
-        // Získání dat z formuláře
-        let jmeno = document.getElementById("jmeno").value;
-        let email = document.getElementById("email").value;
-        let destinace = document.getElementById("destinace").value;
-
-        // Zde můžete provést jakoukoli operaci s těmito daty (např. je uložit do localStorage, nebo je použít v aplikaci)
-        console.log("Jméno:", jmeno);
-        console.log("E-mail:", email);
-        console.log("Destinace:", destinace);
-
-        // Skrytí formuláře a zobrazení potvrzení
-        document.getElementById("poptavkaForm").style.display = "none";
-        document.getElementById("potvrzeni").style.display = "block";
-    });
-    </script>
 
 </body>
 </html>

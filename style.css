@@ -17,20 +17,19 @@ body {
 
 /* Parallax efekt pro pozadí */
 .parallax {
-    background-image: url('images/background2.jpg');  /* Nastavení obrázku jako pozadí pro efekt parallax */
+    background-image: url('images/index-pozadi.png');  /* Nastavení obrázku jako pozadí pro efekt parallax */
     min-height: 100vh;  /* Pozadí pokryje minimálně celou výšku obrazovky */
-    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
     background-position: center;  /* Pozadí je zarovnáno na střed */
     background-repeat: no-repeat;  /* Pozadí se nebudete opakovat */
     background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
     display: flex;  /* Flexbox pro uspořádání obsahu */
     flex-direction: column;  /* Flexbox uspořádá obsah ve sloupci */
     justify-content: flex-start;  /* Vertikálně zarovná obsah na začátek */
-    align-items: center;  /* Horizontálně zarovná obsah na střed */
     text-align: center;  /* Zarovná text na střed */
-    padding-top: 50px;  /* Vytvoření 50px mezery nahoře */
     background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
+    
 }
+
 
 .pozadi {
     background-image: url('./images/pozadi.avif');  /* Nastavení obrázku jako pozadí pro efekt parallax */
@@ -99,7 +98,13 @@ body {
 }
 
 .o-nas-page {
-    background-color: #111113;
+    background-image: url('./images/o-nas-pozadi.png'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
 }
 
 
@@ -214,50 +219,53 @@ header {
     margin: 50px auto;
     padding: 30px;
     background-color: #f9fafb;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
+    color: #2c3e50;
 }
 
 .travel-tips h3 {
     text-align: center;
-    color: #2c3e50;
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px;
+    margin-bottom: 25px;
     font-weight: 700;
+    color: #2c3e50;
 }
 
-.travel-tips ul {
-    list-style: none;
-    padding-left: 0;
+.travel-tips ol {
+    list-style-type: upper-roman; /* Použití římských číslic */
+    list-style-position: inside; /* Číslování umístěné mimo obsah položky */
+    padding-left: 30px; /* Větší odsazení pro lepší zarovnání */
 }
 
 .travel-tips li {
-    background: #ffffff;
-    padding: 15px;
+    background: #ffffff; /* Světlé pozadí pro kontrast */
+    padding: 15px 20px;
     margin-bottom: 10px;
     border-radius: 8px;
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
+    line-height: 1.6;
+    position: relative;
 }
 
 .travel-tips li:hover {
     background-color: #e0e4ec;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
-.travel-tips li::before {
-    content: "✔";
-    color: #2b5373;
+/* Zvýraznění číslování */
+.travel-tips ol li::marker {
+    font-weight: bold;
+    color: #2c3e50;
     font-size: 20px;
-    margin-right: 15px;
 }
 
-.travel-tips li:last-child {
-    margin-bottom: 0;
-}
+
+
 
 
 .travel-why {
@@ -265,7 +273,6 @@ header {
     margin: 50px auto;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -899,5 +906,81 @@ footer a:hover {
     margin: 15px;
 }
 
+/* Styl pro kontejnér telefonního čísla s předvolbou */
+.phone-container {
+    display: flex;
+    align-items: center; /* Vertikální zarovnání na střed */
+    gap: 10px; /* Mezera mezi select a input polem */
+}
+
+/* Styl pro select (předvolba) a input (telefonní číslo) */
+.phone-container select,
+.phone-container input {
+    width: 150px; /* Šířka pro oba prvky */
+    padding: 8px;
+    font-size: 1rem;
+}
+
+#poptavkaForm input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s ease;
+}
+
+#poptavkaForm input[type="email"]:focus {
+    border-color: #2b5373;
+    box-shadow: 0 0 5px rgba(43, 83, 115, 0.5);
+}
 
 
+.letenky {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.letenky caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.letenky th, .letenky td {
+    padding: 12px 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.letenky th {
+    background-color: #2b5373;
+    color: white;
+    font-size: 1.1em;
+}
+
+.letenky td {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.letenky td[rowspan] {
+    background-color: #fafafa;
+    font-weight: bold;
+}
+
+.letenky tr:nth-child(even) td {
+    background-color: #fafafa;
+}
+
+.letenky tr:hover td {
+    background-color: #e0e4ec;
+}
+
+.letenky th[colspan] {
+    background-color: #2b5373;
+}
