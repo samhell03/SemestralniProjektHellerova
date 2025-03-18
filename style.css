@@ -32,12 +32,82 @@ body {
     background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
 }
 
+.pozadi {
+    background-image: url('./images/pozadi.avif');  /* Nastavení obrázku jako pozadí pro efekt parallax */
+    min-height: 100vh;  /* Pozadí pokryje minimálně celou výšku obrazovky */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-position: center;  /* Pozadí je zarovnáno na střed */
+    background-repeat: no-repeat;  /* Pozadí se nebudete opakovat */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    display: flex;  /* Flexbox pro uspořádání obsahu */
+    flex-direction: column;  /* Flexbox uspořádá obsah ve sloupci */
+    justify-content: flex-start;  /* Vertikálně zarovná obsah na začátek */
+    align-items: center;  /* Horizontálně zarovná obsah na střed */
+    text-align: center;  /* Zarovná text na střed */
+    padding-top: 50px;  /* Vytvoření 50px mezery nahoře */
+    background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.thajsko-pozadi {
+    background-image: url('./images/thajsko-pozadi.jpg'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.paris-pozadi {
+    background-image: url('./images/paris-pozadi.png'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.egypt-pozadi {
+    background-image: url('./images/egypt-pozadi.png'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.dubai-pozadi {
+    background-image: url('./images/dubai-pozadi.png'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.poptavka-pozadi {
+    background-image: url('./images/poptavka-pozadi.png'); 
+    background-size: contain;  /* Udrží celý obrázek bez oříznutí */
+    background-repeat: no-repeat;  /* Zabrání opakování */
+    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
+    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
+    background-position: top left;  /* Umístí obrázek vlevo nahoře */
+    background-color: black;  /* Fallbacková barva pozadí pro starší prohlížeče */
+}
+
+.o-nas-page {
+    background-color: #111113;
+}
+
 
 /* Styl pro hlavičku (header) */
 header {
     background: #2c5474;  /* Tmavě zelené pozadí */
     color: white;  /* Bílé písmo */
-    padding: 20px;  /* Padding kolem textu */
+    padding: 10px;  /* Padding kolem textu */
     text-align: center;  /* Text zarovnaný na střed */
     position: relative;  /* Relativní pozice pro z-index */
     z-index: 1;  /* Zajištění, že hlavička bude nad ostatním obsahem */
@@ -194,7 +264,6 @@ header {
     width: 100%;
     margin: 50px auto;
     padding: 30px;
-    background-color: #f9fafb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     font-family: 'Montserrat', sans-serif;
@@ -368,32 +437,29 @@ li.dropdown {
     text-shadow: 2px 2px 4px #2c5474;
 }
 
+
 h1{
     font-size: 4.5rem;
-    color: black;
+    color: white;
     text-shadow: 2px 2px 4px #2c5474;
     margin: 20px 0 20px;
 }
 
-.poptavka-page h1{
-    font-size: 4.5rem;
-    color: black;
+.my-page h2 {
+    font-size: 2.5rem;
+    color: white;
     text-shadow: 2px 2px 4px #2c5474;
-    margin: 20px 0 20px;
 }
 
-.dubaj-page h2 {
-    font-size: 3rem;
-    color: black;
-    text-shadow: 2px 2px 4px #2c5474;
-    margin: 20px 0 20px;
-}
-
-.dubaj-page h3 {
+.my-page h3 {
     font-size: 2rem;
     color: #2c5474;
-    text-shadow: 2px 2px 4px white;
 }
+
+.o-nas-page{
+    background-color: #111113;
+}
+
 
 .index h3{
     font-size: 3rem;
@@ -520,7 +586,7 @@ h1{
 
 .info-card, 
 .weather-card {
-    background-color: #f4f4f4;
+    background-color: rgba(244, 244, 244, 0.8); /* Světle šedé s 80% neprůhledností */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -828,9 +894,9 @@ footer a:hover {
 }
 
 #potvrzeni p {
-    font-size: 1.6rem;  /* Velikost písma pro text potvrzení */
-    color: #333;  /* Tmavý text pro potvrzení */
-    margin-top: 15px;  /* Mezery nad textem */
+    font-size: 1.6rem;
+    color: white;
+    margin: 15px;
 }
 
 

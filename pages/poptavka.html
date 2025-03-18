@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Dubaj - Destinace</title>
 </head>
-<body class="poptavka-page">
+<body class="my-page poptavka-pozadi">
     <header>
         <nav>
             <ul>
@@ -31,9 +31,8 @@
 
 <main class="main-container">
     <section id="poptavka" class="poptavka-section">
-        <h1 class="custom h1">Formulář</h1>
-        <p class="text">Neváhejte nás kontaktovat, sjednejte si individuální konzultaci a zjistěte potřebné informace!</p>
-        
+        <h1>Formulář</h1>
+        <!--<p class="text">Neváhejte nás kontaktovat, sjednejte si individuální konzultaci a zjistěte potřebné informace!</p>-->
         <div id="destinaceImage" class="destinace-image" style="display: none;">
             <img src="https://via.placeholder.com/600x400?text=Egypt" alt="Egypt" id="egyptImage" class="destinace-img">
         </div>
@@ -62,7 +61,7 @@
         
         <div id="potvrzeni" class="confirmation-message">
             <svg width="100" height="100" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="40" fill="lightgreen" />
+                <circle cx="50" cy="50" r="40" fill= "green" />
                 <path d="M30 50 L45 65 L70 35" stroke="white" stroke-width="5" fill="none"/>
             </svg>
             <p>Poptávka byla úspěšně odeslána!</p>
@@ -70,11 +69,11 @@
     </section>
 </main>
 
-<footer class="egypt-page">
-    <p>&copy; 2025 Cestování a Turistika | 
-        <a href="https://validator.w3.org/">Validace HTML</a> | 
-        <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
+<footer>
+    <p>&copy; 2025 Cestování a Turistika 
     </p>
+    <a href="https://validator.w3.org/">Validace HTML</a> 
+    <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
 </footer>
 
 </body>
@@ -105,5 +104,6 @@
         document.getElementById("potvrzeni").style.display = "block";
     });
     </script>
+
 </body>
 </html>
