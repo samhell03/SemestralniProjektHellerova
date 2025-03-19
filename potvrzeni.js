@@ -19,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
-
-
 // Funkce pro otevření/uzavření mobilního menu
 function toggleMenu() {
     var menu = document.querySelector('ul');
@@ -44,3 +41,13 @@ document.addEventListener('click', function(event) {
         });
     }
 });
+
+
+function printTable() {
+    let originalContent = document.body.innerHTML; // Uložení původního obsahu stránky
+    let tableContent = document.getElementById("letenkyTable").outerHTML; // Získání tabulky
+
+    document.body.innerHTML = tableContent; // Zobrazení pouze tabulky
+    window.print(); // Spuštění tisku
+    document.body.innerHTML = originalContent; // Obnova původní stránky
+}

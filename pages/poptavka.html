@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
     <script src="../potvrzeni.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <title>Dubaj - Destinace</title>
 </head>
@@ -31,14 +32,14 @@
 <main class="main-container">
     <section id="poptavka" class="poptavka-section">
         <h1>Formulář</h1>
-        
+
         <form id="poptavkaForm" class="form-container">
             <fieldset>
                 <legend class="form-legend">Poptávka destinace</legend>
-                
+
                 <label for="jmeno" class="form-label">Jméno:</label>
                 <input type="text" id="jmeno" name="jmeno" class="form-input" required>
-                
+
                 <label for="email" class="form-label">E-mail:</label>
                 <input type="email" id="email" name="email" class="form-input" placeholder="email@domena.cz" required>
 
@@ -55,7 +56,7 @@
                     pattern="^[0-9]{9}$"
                         title="Telefonní číslo musí obsahovat právě 9 číslic.">
                 </div>
-        
+
                 <label for="destinace" class="form-label">Vyberte destinaci:</label>
                 <select id="destinace" name="destinace" class="form-input" required>
                     <option value="dubaj">Dubaj</option>
@@ -63,7 +64,7 @@
                     <option value="pariz">Paříž</option>
                     <option value="thajsko">Thajsko</option>
                 </select>
-        
+
                 <button type="submit" class="form-submit-btn">Odeslat poptávku</button>
             </fieldset>
         </form>
@@ -76,63 +77,68 @@
         </div>
     </section>
 
-    <table class="letenky">
-        <h2>Kdy je to nejvýhodnější?</h2>
-        <thead>
-            <tr>
-                <th rowspan="2">Destinace</th>
-                <th colspan="2">Nejlevnější letenky</th>
-            </tr>
-            <tr>
-                <th>Jednosměrná</th>
-                <th>Obousměrná</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td rowspan="2">Dubaj</td>
-                <td>4 990 Kč (leden 2025)</td>
-                <td>11 000 Kč (leden 2025)</td>
-            </tr>
-            <tr>
-                <td>6 000 Kč (jaro 2025)</td>
-                <td>12 000 Kč (jaro 2025)</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Egypt</td>
-                <td>4 500 Kč (jaro 2025)</td>
-                <td>8 200 Kč (jaro 2025)</td>
-            </tr>
-            <tr>
-                <td>5 000 Kč (podzim 2025)</td>
-                <td>9 000 Kč (podzim 2025)</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Paříž</td>
-                <td>1 500 Kč (jaro 2025)</td>
-                <td>2 800 Kč (jaro 2025)</td>
-            </tr>
-            <tr>
-                <td>1 700 Kč (podzim 2025)</td>
-                <td>3 000 Kč (podzim 2025)</td>
-            </tr>
-            <tr>
-                <td rowspan="2">Thajsko</td>
-                <td>5 500 Kč (září 2025)</td>
-                <td>10 000 Kč (září 2025)</td>
-            </tr>
-            <tr>
-                <td>5 167 Kč (říjen 2025)</td>
-                <td>9 500 Kč (říjen 2025)</td>
-            </tr>
-        </tbody>
-    </table>
+    <h2>Kdy je to nejvýhodnější?</h2>
+<table class="letenky" id="letenkyTable">
+    <thead>
+        <tr>
+            <th rowspan="2">Destinace</th>
+            <th colspan="2">
+                <div class="letenky-header">
+                    Nejlevnější letenky
+                    <span class="print-button" onclick="printTable()">Tisk</span>
+                </div>
+            </th>
+        </tr>
+        <tr>
+            <th>Jednosměrná</th>
+            <th>Obousměrná</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="2">Dubaj</td>
+            <td>4 990 Kč (leden 2025)</td>
+            <td>11 000 Kč (leden 2025)</td>
+        </tr>
+        <tr>
+            <td>6 000 Kč (jaro 2025)</td>
+            <td>12 000 Kč (jaro 2025)</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Egypt</td>
+            <td>4 500 Kč (jaro 2025)</td>
+            <td>8 200 Kč (jaro 2025)</td>
+        </tr>
+        <tr>
+            <td>5 000 Kč (podzim 2025)</td>
+            <td>9 000 Kč (podzim 2025)</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Paříž</td>
+            <td>1 500 Kč (jaro 2025)</td>
+            <td>2 800 Kč (jaro 2025)</td>
+        </tr>
+        <tr>
+            <td>1 700 Kč (podzim 2025)</td>
+            <td>3 000 Kč (podzim 2025)</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Thajsko</td>
+            <td>5 500 Kč (září 2025)</td>
+            <td>10 000 Kč (září 2025)</td>
+        </tr>
+        <tr>
+            <td>5 167 Kč (říjen 2025)</td>
+            <td>9 500 Kč (říjen 2025)</td>
+        </tr>
+    </tbody>
+</table>
 
 </main>
 
 <footer>
     <p>&copy; 2025 Cestování a Turistika</p>
-    <a href="https://validator.w3.org/">Validace HTML</a> 
+    <a href="https://validator.w3.org/">Validace HTML</a>
     <a href="https://jigsaw.w3.org/css-validator/">Validace CSS</a>
 </footer>
 

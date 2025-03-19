@@ -17,7 +17,7 @@ body {
 
 /* Parallax efekt pro pozadí */
 .parallax {
-    background-image: url('images/index-pozadi.png');  /* Nastavení obrázku jako pozadí pro efekt parallax */
+    background-image: url('images/index-pozadi.webp');  /* Nastavení obrázku jako pozadí pro efekt parallax */
     min-height: 100vh;  /* Pozadí pokryje minimálně celou výšku obrazovky */
     background-position: center;  /* Pozadí je zarovnáno na střed */
     background-repeat: no-repeat;  /* Pozadí se nebudete opakovat */
@@ -27,28 +27,11 @@ body {
     justify-content: flex-start;  /* Vertikálně zarovná obsah na začátek */
     text-align: center;  /* Zarovná text na střed */
     background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
-    
-}
 
-
-.pozadi {
-    background-image: url('./images/pozadi.avif');  /* Nastavení obrázku jako pozadí pro efekt parallax */
-    min-height: 100vh;  /* Pozadí pokryje minimálně celou výšku obrazovky */
-    background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
-    background-position: center;  /* Pozadí je zarovnáno na střed */
-    background-repeat: no-repeat;  /* Pozadí se nebudete opakovat */
-    background-size: cover;  /* Pozadí se roztáhne a pokryje celou plochu */
-    display: flex;  /* Flexbox pro uspořádání obsahu */
-    flex-direction: column;  /* Flexbox uspořádá obsah ve sloupci */
-    justify-content: flex-start;  /* Vertikálně zarovná obsah na začátek */
-    align-items: center;  /* Horizontálně zarovná obsah na střed */
-    text-align: center;  /* Zarovná text na střed */
-    padding-top: 50px;  /* Vytvoření 50px mezery nahoře */
-    background-color: rgb(156,164,129);  /* Fallbacková barva pozadí pro starší prohlížeče */
 }
 
 .thajsko-pozadi {
-    background-image: url('./images/thajsko-pozadi.jpg'); 
+    background-image: url('./images/thajsko-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -58,7 +41,7 @@ body {
 }
 
 .paris-pozadi {
-    background-image: url('./images/paris-pozadi.png'); 
+    background-image: url('./images/paris-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -68,7 +51,7 @@ body {
 }
 
 .egypt-pozadi {
-    background-image: url('./images/egypt-pozadi.png'); 
+    background-image: url('./images/egypt-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -78,7 +61,7 @@ body {
 }
 
 .dubai-pozadi {
-    background-image: url('./images/dubai-pozadi.png'); 
+    background-image: url('./images/dubai-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -88,7 +71,7 @@ body {
 }
 
 .poptavka-pozadi {
-    background-image: url('./images/poptavka-pozadi.png'); 
+    background-image: url('./images/poptavka-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -98,7 +81,7 @@ body {
 }
 
 .o-nas-page {
-    background-image: url('./images/o-nas-pozadi.png'); 
+    background-image: url('./images/o-nas-pozadi.webp');
     background-size: contain;  /* Udrží celý obrázek bez oříznutí */
     background-repeat: no-repeat;  /* Zabrání opakování */
     background-attachment: fixed;  /* Efekt parallax: pozadí se pohybuje při scrollování */
@@ -316,7 +299,7 @@ header {
         max-width: 100%;
     }
 }
-        
+
 
 
 
@@ -472,7 +455,7 @@ h1{
     font-size: 3rem;
     margin: 80px 0 20px;
     color: white;
-    text-shadow: 2px 2px 4px #2c5474;  
+    text-shadow: 2px 2px 4px #2c5474;
 }
 
 .text {
@@ -591,7 +574,7 @@ h1{
     margin: 30px;
 }
 
-.info-card, 
+.info-card,
 .weather-card {
     background-color: rgba(244, 244, 244, 0.8); /* Světle šedé s 80% neprůhledností */
     padding: 20px;
@@ -674,7 +657,7 @@ footer {
     margin-top: auto;  /* Automatické zarovnání patičky na spodní část */
     text-align: center;  /* Text v patičce na střed */
     padding: 15px;  /* Odsazení kolem textu */
-    
+
 }
 
 /* Styl pro odkazy v patičce */
@@ -762,7 +745,7 @@ footer a:hover {
         padding: 8px 15px; /* Menší tlačítko */
         font-size: 14px;
     }
-    
+
 }
 
 @media (max-width: 480px) {
@@ -943,6 +926,7 @@ footer a:hover {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     max-width: 750px;
+    border-collapse: collapse;
 }
 
 .letenky caption {
@@ -985,3 +969,25 @@ footer a:hover {
 .letenky th[colspan] {
     background-color: #2b5373;
 }
+
+.letenky-header {
+    display: flex;
+    justify-content: center; /* Zarovnání na střed */
+    align-items: center;
+    gap: 10px; /* Mezera mezi textem a tlačítkem */
+}
+
+/* Styl pro tlačítko "Tisk" */
+.print-button {
+    font-size: 1em;
+    cursor: pointer;
+    color: rgb(98, 193, 83);
+    padding: 4px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.print-button:hover {
+    background-color: white;
+}
+
