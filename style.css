@@ -556,7 +556,7 @@ h1{
     background-color: #3b5998;  /* Změna barvy pozadí při najetí na tlačítko */
 }
 
-.card h4 {
+.card h3 {
     font-size: 2.2rem;  /* Zvýšení velikosti písma pro nadpisy v kartách */
     margin: 10px 0;  /* Mezery kolem nadpisu */
     color: #333;  /* Tmavá barva textu pro lepší čitelnost */
