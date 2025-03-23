@@ -9,7 +9,11 @@ document.addEventListener('DOMContentLoaded', function () {
         let predvolba = document.getElementById("predvolba").value;
 
         document.getElementById("poptavkaForm").style.display = "none";
-        document.getElementById("potvrzeni").style.display = "block";
+
+        let potvrzeni = document.getElementById("potvrzeni");
+        if (potvrzeni) {
+            potvrzeni.style.display = "block";
+        }
     });
 });
 
@@ -33,12 +37,11 @@ document.addEventListener('click', function(event) {
     }
 });
 
-
 function printTable() {
-    let originalContent = document.body.innerHTML; /
+    let originalContent = document.body.innerHTML;
     let tableContent = document.getElementById("letenkyTable").outerHTML;
 
     document.body.innerHTML = tableContent;
-    window.print(); 
+    window.print();
     document.body.innerHTML = originalContent;
 }

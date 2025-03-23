@@ -29,6 +29,28 @@ h1{
     margin: 20px 0 20px;
 }
 
+.hero-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    color: white;  /
+    text-shadow: 2px 2px 4px #2c5474;
+}
+
+.hero-text p {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    max-width: 800px;
+    margin: 0 auto;  
+}
+
+.my-page h2 {
+    font-size: 3.5rem;
+    color: white;
+    text-shadow: 2px 2px 4px #2c5474;
+    padding: 10px;
+}
+
 .my-page h2 {
     font-size: 2.5rem;
     color: white;
@@ -358,6 +380,10 @@ footer a:hover {
     text-align: center;
     background-color: rgb(156,164,129);
 
+}
+
+.p podnadpis{
+    font-size: 2rem;
 }
 /* -------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Stránka Dubai */
