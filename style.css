@@ -32,7 +32,7 @@ h1{
 .hero-text h1 {
     font-size: 4.5rem;
     margin-bottom: 10px;
-    color: white;  /
+    color: white;  
     text-shadow: 2px 2px 4px #2c5474;
 }
 
@@ -41,7 +41,7 @@ h1{
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     max-width: 800px;
-    margin: 0 auto;  
+    margin: 0 auto;
 }
 
 .my-page h2 {
